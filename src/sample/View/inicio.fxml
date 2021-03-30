@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" maxHeight="400" maxWidth="600" minHeight="400" minWidth="600" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.InicioController">
+   <children>
+      <Button fx:id="newBookButton" maxWidth="1.7976931348623157E308" onAction="#toggleVisibleNewBook" text="Crear Nuevo Libro">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Button>
+      <HBox fx:id="hBoxNewBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" visible="false" GridPane.rowIndex="1">
+         <children>
+            <TextField fx:id="bookTitleTextField" onKeyPressed="#newBookEnterPressed" promptText="Titulo Libro" />
+            <Button fx:id="saveNewBookButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#newBookButtonClicked" text="Guardar" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets top="3.0" />
+         </GridPane.margin>
+      </HBox>
+      <Button fx:id="openBookButton" maxWidth="1.7976931348623157E308" onAction="#openBook" prefHeight="25.0" prefWidth="113.0" text="Abrir Libro" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin></Button>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

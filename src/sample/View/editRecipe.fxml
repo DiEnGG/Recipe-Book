@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="mainPane" maxHeight="720" maxWidth="1280" minHeight="720" minWidth="1280" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.EditRecipe">
+    <children>
+      <MenuBar prefHeight="25.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Libro">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveBook" text="Guardar Libro" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+        <Label fx:id="labelNombreReceta" layoutX="555.0" layoutY="50.0" text="Nombre de Receta" />
+        <HBox fx:id="hboxNombreReceta" alignment="CENTER" layoutY="71.0" prefHeight="30.0" prefWidth="1280.0" visible="false">
+            <children>
+                <TextField fx:id="recipeName" />
+                <Button mnemonicParsing="false" onAction="#confirmarNombreReceta" text="Confirmar" />
+            </children>
+        </HBox>
+        <Separator layoutY="360.0" prefHeight="3.0" prefWidth="1280.0" />
+        <Label layoutX="45.0" layoutY="133.0" text="Ingredientes" />
+        <TableView fx:id="tableIngredientes" layoutX="47.0" layoutY="149.0" prefHeight="156.0" prefWidth="509.0">
+            <columns>
+                <TableColumn fx:id="columnNombre" prefWidth="255.0" text="Nombre" />
+                <TableColumn fx:id="columnCantidad" minWidth="5.0" prefWidth="219.0" text="Cantidad" />
+            <TableColumn fx:id="columnDeleteIngrediente" minWidth="2.0" prefWidth="34.0" text="X" />
+            </columns>
+        </TableView>
+        <Label layoutX="697.0" layoutY="133.0" text="Nombre" />
+        <TextField fx:id="nameIngrediente" layoutX="697.0" layoutY="150.0" prefHeight="25.0" prefWidth="509.0" />
+        <Label layoutX="700.0" layoutY="198.0" text="Cantidad" />
+        <TextField fx:id="cantidadIngrediente" layoutX="700.0" layoutY="215.0" prefHeight="25.0" prefWidth="509.0" />
+        <Button fx:id="btnIngredientes" layoutX="700.0" layoutY="280.0" mnemonicParsing="false" onAction="#confirmarIngredientes" prefHeight="25.0" prefWidth="509.0" text="Agregar" />
+        <Separator layoutY="111.0" prefHeight="3.0" prefWidth="1280.0" />
+        <Label layoutX="47.0" layoutY="379.0" text="Preparacion" />
+        <Separator layoutX="640.0" layoutY="360.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="6.0" />
+        <TableView fx:id="tablePreparacion" layoutX="47.0" layoutY="396.0" prefHeight="156.0" prefWidth="509.0">
+            <columns>
+                <TableColumn fx:id="columnPasos" prefWidth="473.0" text="Pasos" />
+            <TableColumn fx:id="columnDeletePreparacion" prefWidth="35.0" text="X" />
+            </columns>
+        </TableView>
+        <TextArea fx:id="taPreparacion" layoutX="47.0" layoutY="591.0" prefHeight="55.0" prefWidth="509.0" />
+        <Button fx:id="btnPreparacion" layoutX="47.0" layoutY="653.0" mnemonicParsing="false" onAction="#confirmarPreparacion" prefHeight="25.0" prefWidth="509.0" text="Agregar" />
+        <Label layoutX="47.0" layoutY="574.0" text="Paso:" />
+        <Label layoutX="700.0" layoutY="379.0" text="Observaciones" />
+        <TableView fx:id="tableObservacion" layoutX="700.0" layoutY="396.0" prefHeight="156.0" prefWidth="509.0">
+            <columns>
+                <TableColumn fx:id="columnObs" prefWidth="474.0" text="Observacion" />
+            <TableColumn fx:id="columnDeleteObservacion" prefWidth="34.0" text="X" />
+            </columns>
+        </TableView>
+        <TextArea fx:id="taObservacion" layoutX="700.0" layoutY="591.0" prefHeight="55.0" prefWidth="509.0" />
+        <Button fx:id="btnObservacion" layoutX="700.0" layoutY="653.0" mnemonicParsing="false" onAction="#confirmarObservacion" prefHeight="25.0" prefWidth="509.0" text="Agregar" />
+        <Label layoutX="700.0" layoutY="574.0" text="Observacion:" />
+        <Button fx:id="buttonChangeName" layoutX="662.0" layoutY="46.0" mnemonicParsing="false" onAction="#displayChangeNameButton" prefHeight="25.0" prefWidth="69.0" text="Editar" />
+      <Button layoutX="1160.0" layoutY="25.0" mnemonicParsing="false" onAction="#saveRecipe" text="Guardar Receta" />
+    </children>
+</Pane>

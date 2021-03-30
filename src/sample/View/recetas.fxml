@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="720" maxWidth="1280" minHeight="720" minWidth="1280" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.RecetasController">
+   <children>
+      <SplitPane dividerPositions="0.2378716744913928" prefHeight="752.0" prefWidth="1280.0">
+        <items>
+          <AnchorPane fx:id="anchorLeft" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="301.0">
+               <children>
+                  <HBox fx:id="hboxTools" alignment="CENTER_RIGHT" fillHeight="false" layoutX="-1.0" layoutY="1.0" prefHeight="34.0" prefWidth="301.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#createRecipe" text="Agregar" />
+                     </children>
+                  </HBox>
+                  <TreeTableView fx:id="recipesTree" layoutY="34.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="301.0">
+                    <columns>
+                      <TreeTableColumn fx:id="columnRecipes" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="300.0" resizable="false" text="Recetas" />
+                        <TreeTableColumn fx:id="columnDelete" maxWidth="27.0" prefWidth="27.0" text="X" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TreeTableView>
+                  <Button fx:id="btnTool" layoutX="4.0" layoutY="6.0" mnemonicParsing="false" onAction="#saveBook" text="Guardar Libro" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="539.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label fx:id="recipeName" layoutX="384.0" layoutY="31.0" text="Nombre de Receta:" />
+                  <Label layoutX="41.0" layoutY="86.0" text="Ingredientes: " />
+                  <Label layoutX="41.0" layoutY="285.0" text="Preparacion: " />
+                  <Label layoutX="41.0" layoutY="498.0" text="Observacion: " />
+                  <TableView fx:id="tableViewIngredientes" layoutX="151.0" layoutY="86.0" prefHeight="164.0" prefWidth="639.0">
+                    <columns>
+                      <TableColumn fx:id="columnIngrediente" prefWidth="319.0" text="Ingrediente" />
+                      <TableColumn fx:id="columnCantidad" prefWidth="319.0" text="Cantidad" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tableViewPasos" layoutX="149.0" layoutY="285.0" prefHeight="164.0" prefWidth="639.0">
+                    <columns>
+                      <TableColumn fx:id="columnPasos" prefWidth="638.0" text="Pasos" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tableViewObs" layoutX="151.0" layoutY="498.0" prefHeight="164.0" prefWidth="639.0">
+                    <columns>
+                      <TableColumn fx:id="columnObs" prefWidth="638.0" text="Observaciones" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="861.0" layoutY="14.0" mnemonicParsing="false" onAction="#editRecipeWindow" text="Editar Receta" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
