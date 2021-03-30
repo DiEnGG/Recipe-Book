@@ -1,2 +1,2 @@
 # Recipe-Book
-Rcipe Book (Java, JavaFX)
+Recipe Book (Java, JavaFX)
